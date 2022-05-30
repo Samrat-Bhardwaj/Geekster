@@ -1,0 +1,5 @@
+2
+Maximum of array============
+45
+Minimum of array============
+4
