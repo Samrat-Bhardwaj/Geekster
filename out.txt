@@ -1,5 +1,4 @@
-2
-Maximum of array============
-45
-Minimum of array============
-4
+Before sorting the array
+5 4 3 2 1 
+After sorting the array
+1 2 3 4 5 
