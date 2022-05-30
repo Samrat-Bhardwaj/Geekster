@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Sorting {
     public static void swap(int[] arr, int i, int j) {
@@ -43,6 +44,7 @@ public class Sorting {
         System.out.println();
 
         insertion_sort(arr, n);
+        // Arrays.sort(arr); // inbuilt function to sort array
 
         System.out.println("After sorting the array");
         
