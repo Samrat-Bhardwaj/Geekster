@@ -69,7 +69,6 @@ public class Arrays {
             System.out.println("Only 1 element with index = given target");
         } else {
             System.out.println("0 element with index = given target");
-
         }
     }
 }

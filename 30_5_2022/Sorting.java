@@ -31,7 +31,7 @@ public class Sorting {
         int[] arr; // declaration
         arr=new int[n]; // initialization 
 
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n; i++) {
             arr[i]=scn.nextInt();
         }  
 
