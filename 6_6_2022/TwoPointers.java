@@ -18,7 +18,7 @@ public class TwoPointers {
             } else if(arr[p2]==2){
                 swap(arr,p2,p3);
                 p3--;
-            } else {
+            } else { // arr[p2]==1 
                 p2++;
             }
         }
@@ -30,6 +30,8 @@ public class TwoPointers {
         arr[x]=arr[y];
         arr[y]=temp;
     }
+
+    // segregate even and odd 
 
     public static void main(String[] args) {
         Scanner scn=new Scanner(System.in);
