@@ -59,7 +59,7 @@ public class Main {
     // merge two sorted arrays ========================================================= 
 
     // O(n+m)
-    public static int[] merge(long arr1[], long arr2[], int n, int m) 
+    public static long[] merge(long arr1[], long arr2[], int n, int m) 
     {
         long[] ans=new long[n+m];
         
