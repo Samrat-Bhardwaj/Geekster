@@ -46,7 +46,7 @@ public class TwoPointer {
     }
 
     public static int countTriplet(int[] nums, int target){
-        Arrays.sort(nums);
+        Arrays.sort(nums); //nlogn
         int n=nums.length;
 
         int count=0;
