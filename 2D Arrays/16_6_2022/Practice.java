@@ -1,6 +1,22 @@
 import java.util.*;
 
 public class Practice {
+    //transpose of a matrix,for identity matrix ============================================== 
+    static void transpose(int arr[][], int n)
+    {
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(i<j){ // swap arr[i][j] with arr[j][i];
+                    int temp=arr[i][j];
+                    
+                    arr[i][j]=arr[j][i];
+                    arr[j][i]=temp;
+                }
+            }
+        }
+    }
+
+
     public static boolean checkIdentityMatrix(int[][] arr, int n, int m){
         if(n!=m){
             return false;
