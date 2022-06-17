@@ -2,6 +2,8 @@ import java.io.*;
 import java.util.*;
 
 public class Solution {
+    // https://www.hackerrank.com/contests/may-practice-java-dsa/challenges/cc3-02-convert-1-d-array-to-2-d-array/copy-from/1345793645
+    
     public static int[][] convert1Dto2D(int[] arr, int n, int rows, int cols){
         
         int[][] ans=new int[rows][cols];
@@ -13,7 +15,7 @@ public class Solution {
         }
         return ans;
     }
-    
+
     // https://www.hackerrank.com/contests/may-practice-java-dsa/challenges/cc2-04-diagonal-sum/copy-from/1345792814
 
     public static int getDiagonalSum(int[][] arr, int n){
