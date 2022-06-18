@@ -2,6 +2,44 @@ import java.io.*;
 import java.util.*;
 
 public class Solution {
+    // rotate array 
+
+    public static void transpose(int arr[][], int n){
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(i<j){ // swap arr[i][j] with arr[j][i];
+                    int temp=arr[i][j];
+                    
+                    arr[i][j]=arr[j][i];
+                    arr[j][i]=temp;
+                }
+            }
+        }
+    }
+    
+    public static void rotateBy90Degrees(int[][] arr, int n){
+        transpose(arr,n);
+        
+        for(int row=0; row<n; row++){
+            // reverse the whole row
+            
+            int i=0;
+            int j=n-1;
+            
+            while(i<j){
+                // swap arr[row][i],arr[row][j]
+                
+                int temp=arr[row][i];
+                
+                arr[row][i]=arr[row][j];
+                arr[row][j]=temp;
+                
+                i++;
+                j--;
+            }
+        }
+    }
+    
     public static int[][] multiplyMatrix(int[][] A, int n1, int m1, int[][]B, int n2,int m2){
         int[][] C=new int[n1][m2];
         
