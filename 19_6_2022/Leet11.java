@@ -7,7 +7,7 @@ public int maxArea(int[] height) {
     
     int max_area=0;
     
-    while(i<j){
+    while(i<j){ 
         int height_tower=Math.min(height[i],height[j]);
         int width=j-i;
         
@@ -25,4 +25,5 @@ public int maxArea(int[] height) {
     }
     
     return max_area;
+    
 }
