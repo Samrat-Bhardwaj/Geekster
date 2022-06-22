@@ -31,8 +31,18 @@ public class Practice {
 
         String str=scn.nextLine();
 
-        String ans=convertToIdeal(str);
+        // String ans=convertToIdeal(str);
 
-        System.out.println(ans);
+        // System.out.println(ans);
+
+        String[] arr=str.split(" ");
+
+        for(int i=0; i<arr.length; i++){
+            String s=arr[i];
+
+            String idealString=convertToIdeal(s);
+
+            System.out.print(idealString+" ");
+        }
     }
 }
