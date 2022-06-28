@@ -1,6 +1,35 @@
 import java.util.*;
 
 public class Practice {
+    // https://practice.geeksforgeeks.org/problems/non-repeating-character-1587115620/1/
+    // https://www.hackerrank.com/contests/may-practice-java-dsa/challenges/first-non-repeating-char-1
+
+    static char nonrepeatingCharacter(String str){
+        int n=str.length();
+
+        int[] fre=new int[26];
+
+        // storing frequencies of each character
+        for(int i=0; i<n; i++){
+            char ch=str.charAt(i);
+
+            int idx=ch-'a';
+            fre[idx]++;
+        }
+
+        for(int i=0; i<n; i++){
+            char ch=str.charAt(i);
+
+            int idx=ch-'a';
+
+            if(fre[idx]==1){
+                return ch;
+            }
+        }
+
+        return '$';
+    }
+
     // https://www.hackerrank.com/contests/may-practice-java-dsa/challenges/string-ascii-value
 
     public static boolean isEqual(String str1, String str2){
