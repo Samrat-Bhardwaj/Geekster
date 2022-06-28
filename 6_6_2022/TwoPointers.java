@@ -31,7 +31,7 @@ public class TwoPointers {
         arr[y]=temp;
     }
 
-    // segregate even and odd 
+    // segregate even and odd ================
 
     public static void main(String[] args) {
         Scanner scn=new Scanner(System.in);
