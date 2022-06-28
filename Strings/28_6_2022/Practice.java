@@ -1,6 +1,33 @@
 import java.util.*;
 
 public class Practice {
+    // https://www.hackerrank.com/contests/may-practice-java-dsa/challenges/string-ascii-value
+
+    public static boolean isEqual(String str1, String str2){
+        int sum1=0;
+        int sum2=0;
+
+        for(int i=0; i<str1.length(); i++){
+            char ch=str1.charAt(i);
+
+            int val=ch;
+            sum1=sum1+val;
+        }
+
+        for(int i=0; i<str2.length(); i++){
+            char ch=str2.charAt(i);
+
+            int val=ch;
+            sum2=sum2+val;
+        }        
+
+        if(sum1==sum2){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static boolean checkBalanced(String str){
         int n=str.length();
         int first_half=0;
