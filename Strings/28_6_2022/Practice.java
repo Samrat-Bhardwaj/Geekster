@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Practice {
     public static boolean isVowel(char ch){
         if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
