@@ -10,7 +10,7 @@ public class Substring {
         }
 
         return ans;
-    }
+    } 
 
     public static void generateAllSubstrings(String str){
         int n=str.length();
@@ -34,6 +34,7 @@ public class Substring {
             }
         }
     }
+    
     public static void main(String[] args) {
         Scanner scn=new Scanner(System.in);
 
