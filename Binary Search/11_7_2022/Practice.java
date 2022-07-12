@@ -83,6 +83,8 @@ public class Practice {
             }
         }
 
+        if(left==arr.length) return -1;
+        
         return left;
     }
     public static void main(String[] args) {
