@@ -28,11 +28,13 @@ class Student {
         roll_num=new_roll_number;
     }
 
-    
-    public void getName(){
+    // getters 
+    public String getName(){
         System.out.println("Name is "+ name);
+        return name;
     }
 
+    // setters 
     public void setName(String newName){
         name=newName;
     }
@@ -43,16 +45,38 @@ class Student {
 }
 
 public class OOP {
+    public static void swapNames(Student s1, Student s2){
+        String nameOfS1=s1.getName();
+        String nameofS2=s2.getName();
+
+        s1.setName(nameofS2);
+        s2.setName(nameOfS1);
+    }
     public static void main(String[] args) {
-            // className objectName = "new" + "ClassName"+ "()";
+        // className objectName = "new" + "ClassName"+ "()";
 
         Student s1=new Student();
-        Student s2=new Student(21);
-        Student s3=new Student(25);
+        Student s2=new Student();
 
-        Student s4=new Student(123,15425);
+        System.out.println(s1);
 
-        Student s5=new Student(123,15425);
+        s1.setName("ram");
+        s2.setName("shyam");
+
+        swapNames(s1,s2);
+
+        System.out.println("After function call =================");
+        s1.getName();
+        s2.getName();
+        // Student s3=new Student(25);
+
+        // s1.getName();
+        // s1.setName("ekster");
+        // s1.getName();
+
+        // Student s4=new Student(123,15425);
+
+        // Student s5=new Student(123,15425);
 
         // Student geek=new Student(1200,12);
         
