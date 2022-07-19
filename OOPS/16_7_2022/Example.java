@@ -14,9 +14,7 @@ class Vechile {
 }
 
 class Car extends Vechile {
-    // public void fun(){ // not allowed
-    //     System.out.println("This is not fun");
-    // }
+    int top_speed=200;
 }
 
 public class Example {
