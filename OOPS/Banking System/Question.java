@@ -5,6 +5,9 @@ class Person {
     int account_no;
     int balance;
     int PIN;
+    public Person(){
+
+    }
 
     public Person(String name, int account_no, int balance, int PIN){
         this.name=name;
@@ -111,6 +114,26 @@ public class Question {
         ATM Bank=new ATM();
 
         Scanner scn=new Scanner(System.in);
+        Person p3=new Person();
+
+        System.out.println("Lets create a bank account for you!!");
+        System.out.println("What is your name");
+        String input_name=scn.nextLine();
+
+        p3.name=input_name;
+        p3.account_no=3;
+
+        System.out.println("Whats the initial amount you want to deposit?");
+        int input_amount=scn.nextInt();
+        p3.balance=input_amount;
+
+
+        System.out.println("Enter pin for your account");
+        int input_pin=scn.nextInt();
+        p3.PIN=input_pin;
+
+        Bank.account.add(p3);
+
         Person p1=new Person("A", 1, 1000, 1234);
         Bank.accounts.add(p1);
 
