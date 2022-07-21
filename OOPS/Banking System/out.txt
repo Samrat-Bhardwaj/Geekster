@@ -1,0 +1,3 @@
+Amount received 200 updated balance is 800
+Amount received 100 updated balance is 800
+Amount received 200 updated balance is 600
