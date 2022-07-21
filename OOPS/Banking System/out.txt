@@ -1,3 +1,10 @@
 Amount received 200 updated balance is 800
 Amount received 100 updated balance is 800
-Amount received 200 updated balance is 600
+2000 is not available in your account, curr balance is 800
+New balance is 10800
+New balance is 820
+The balance is 10800
+Entered pin is wrong!
+The balance is 820
+The PIN is changed
+Wrong PIN
