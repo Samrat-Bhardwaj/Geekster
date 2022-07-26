@@ -1,7 +1,5 @@
 import java.util.Stack;
 
-import javax.rmi.ssl.SslRMIClientSocketFactory;
-
 public class Qusetions {
     public int[] nextGreaterElements(int[] nums) {
         int n=nums.length;
