@@ -9,6 +9,19 @@ class Queue {
         this.size=0;
     }
 
+    private void doubleSize(){
+        int[] newData=new int[2*data.length];
+
+        for(int i=0; i<size; i++){
+            int idx=(front+i)%data.length;
+
+            newData[i] = data[idx];
+        }
+
+        front=0;
+        data=newData;
+    }
+
     public void add(int ele){
         if(size==data.length){
             doubleSize();
@@ -27,7 +40,7 @@ class Queue {
         }
 
         int ele=data[front];
-        
+
         front=(front+1) % data.length;
 
         // if(front==data.length) {
