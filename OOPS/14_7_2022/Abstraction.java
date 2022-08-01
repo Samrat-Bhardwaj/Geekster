@@ -8,13 +8,31 @@ abstract class Vechile {
     }
 }
 
-class Car extends Vechile {
-    public void Honk(){
-        System.out.println("Pee poow");
+interface Salman {
+    public void move();
+    public void dontMove();
+}
+
+interface Shahrukh {
+    public void Rock();
+}
+
+
+class Car implements Salman, Shahrukh {
+    public void move(){
+        System.out.println("Okay moving!");
+    }
+
+    public void dontMove(){
+        System.out.println("Okay moving!");
+    }
+
+    public void Rock(){
+        System.out.println("Okay moving!");
     }
 }
 
-class Bike extends Vechile {
+class Bike implements Salman {
     public void Honk(){
         System.out.println("Pee poow by bike");
     }

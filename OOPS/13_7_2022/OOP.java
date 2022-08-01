@@ -17,6 +17,7 @@ class Student {
         System.out.println("This is constructor 1");
     }
 
+    // parametrized constructors 
     public Student(int new_roll_number, int new_age){
         System.out.println("This is constructor 2");
         roll_num=new_roll_number;
@@ -55,10 +56,11 @@ public class OOP {
     public static void main(String[] args) {
         // className objectName = "new" + "ClassName"+ "()";
 
-        Student s1=new Student();
+        Student s1=new Student(2);
         Student s2=new Student();
 
         System.out.println(s1);
+
 
         s1.setName("ram");
         s2.setName("shyam");
