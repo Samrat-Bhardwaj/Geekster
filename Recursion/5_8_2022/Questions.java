@@ -81,15 +81,54 @@ public class Questions {
         return ans;
     }
 
+    // binary search using recursion =============================================== 
+    public static int bs_rec(int[] arr, int tar, int left, int right){
+        if(left>right){
+            return -1;
+        }
+
+        int mid=(left+right)/2;
+
+        if(arr[mid]==tar){
+            return mid;
+        } else if(arr[mid]>tar){
+            return bs_rec(arr, tar, left, mid-1);
+        } else {
+            return bs_rec(arr, tar, mid+1, right);
+        }
+    }
+
+    public static int binary_search_handler(int[] arr, int tar){
+        int left=0;
+        int right=arr.length-1;
+
+        return bs_rec(arr,tar,left,right);
+    }
+
+    // Subsequence 
+    public static void createSubsequences(String str, int idx, String sub){
+        if(idx==str.length()){
+            System.out.println(sub);
+            return;
+        }
+
+        char ch=str.charAt(idx);
+
+        createSubsequences(str, idx+1, sub); // saying no to this character
+        createSubsequences(str, idx+1, sub+ch); // saying yes to this character
+    }
     public static void main(String[] args) {
-        int[] arr={2,3,5,7,5,7,24};
-        int f=sum(arr, 0);
+        // int[] arr={2,3,5,7,5,7,24};
+        // int f=sum(arr, 0);
 
-        f++;
-        f--;
+        // f++;
+        // f--;
 
-        System.out.println(f);
-        // System.out.println(max_rec(arr, 0));
-        System.out.println(find_rec(arr, 0, 7));
+        // System.out.println(f);
+        // // System.out.println(max_rec(arr, 0));
+        // System.out.println(find_rec(arr, 0, 7));
+        String sub="";
+        createSubsequences("abc", 0, sub);
+        // System.out.println("this is "+sub);
     }
 }
