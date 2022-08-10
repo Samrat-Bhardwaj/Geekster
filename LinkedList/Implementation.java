@@ -14,13 +14,94 @@ class Node {
 }
 
 public class Implementation {
-    public static void addFirst(int val, Node head){
+    public static Node addFirst(int val, Node head){
         Node nn=new Node(val);
 
         nn.next=head;
         head=nn;
 
-        printLinkedList(head);
+        return head;
+    }
+
+    public static Node removeFirst(Node head){
+        Node nbr=head.next;
+        head=nbr;
+
+        return head;
+    }
+
+    public static Node getTail(Node head){
+        Node itr=head;
+
+        while(itr.next!=null){
+            // itr=itr.next;
+            Node nbr=itr.next;
+            itr=nbr;
+        }
+
+        return itr;
+    }
+
+    public static void addLast(int val, Node head){
+        Node tail=getTail(head);
+
+        Node nn=new Node(val);
+        tail.next=nn;
+
+        tail=nn;
+    }
+
+    public static Node getAt(Node head, int idx){
+        Node itr=head;
+
+        for(int i=0; i<idx; i++){
+            Node nbr=itr.next;
+            itr=nbr;
+        }
+
+        return itr;
+    }
+
+    public static Node addAt(Node head, int idx, int val){
+        if(idx==0){
+            return addFirst(val, head);
+        }
+
+        Node prev=head;
+        for(int i=0; i<(idx-1); i++){
+            Node nbr=prev.next;
+            prev=nbr;
+        }
+
+        Node prev_ka_next=prev.next;
+
+        Node nn=new Node(val);
+
+        prev.next=nn;
+        nn.next=prev_ka_next;
+
+        return head;
+    }
+
+    public static Node removeAt(Node head, int idx){
+        if(idx==0){
+            return removeFirst(head);
+        }
+
+        Node node_ka_prev=head;
+
+        for(int i=0; i<(idx-1); i++){
+            Node nbr=node_ka_prev.next;
+            node_ka_prev=nbr;
+        }
+
+        Node node=node_ka_prev.next;
+
+        Node node_ka_next=node.next;
+
+        node_ka_prev.next=node_ka_next;
+
+        return head;
     }
 
     public static void printLinkedList(Node head){
@@ -33,6 +114,8 @@ public class Implementation {
             Node nbr=itr.next;
             itr=nbr;
         }
+
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -69,9 +152,24 @@ public class Implementation {
         }
 
         printLinkedList(head);
+        // System.out.println();
+        // System.out.println("adding val 5 at head");
 
-        System.out.println("adding val 5 at head");
+        // head=addFirst(5, head);
 
-        addFirst(5, head);
+        // System.out.println("adding val 47 at last");
+
+        // addLast(47, head);
+        // printLinkedList(head);
+        // System.out.println();
+
+        // Node n3=getAt(head, 3);
+        // System.out.println(n3.data);
+
+        head=addAt(head, 2, 47);
+        printLinkedList(head);
+
+        head=removeAt(head, 2);
+        printLinkedList(head);
     }
 }
