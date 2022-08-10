@@ -14,6 +14,15 @@ class Node {
 }
 
 public class Implementation {
+    public static void addFirst(int val, Node head){
+        Node nn=new Node(val);
+
+        nn.next=head;
+        head=nn;
+
+        printLinkedList(head);
+    }
+
     public static void printLinkedList(Node head){
         System.out.println("Printing linked list");
         Node itr=head;
@@ -60,5 +69,9 @@ public class Implementation {
         }
 
         printLinkedList(head);
+
+        System.out.println("adding val 5 at head");
+
+        addFirst(5, head);
     }
 }
