@@ -118,6 +118,62 @@ public class Implementation {
         System.out.println();
     }
 
+    // 11 aug =======================================================================================================
+
+    public static int size(Node head){
+        int ans=0;
+
+        Node itr=head;
+        while(itr!=null){
+            ans++;
+            // itr=itr.next;
+            Node nbr=itr.next;
+            itr=nbr;
+        }
+
+        return ans;
+    }
+
+    public static Node find_Rec(Node itr, int tar){
+        if(itr==null){
+            return null;
+        }
+
+        if(itr.data==tar){
+            return itr;
+        }
+
+        Node ans=find_Rec(itr.next, tar);
+        return ans;
+    }
+
+    public static Node getMid(Node head){
+        Node slow=head;
+        Node fast=head;
+
+        while(fast.next!=null && fast.next.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+
+        return slow;
+    }
+
+    public static Node getKthFromEnd(Node head, int k){
+        Node slow=head;
+        Node fast=head;
+
+        for(int i=0; i<k; i++){
+            fast=fast.next;
+        }
+
+        while(fast!=null){
+            slow=slow.next;
+            fast=fast.next;
+        }
+
+        return slow;
+    }
     public static void main(String[] args) {
         // Node head=new Node(5);
 
@@ -166,10 +222,21 @@ public class Implementation {
         // Node n3=getAt(head, 3);
         // System.out.println(n3.data);
 
-        head=addAt(head, 2, 47);
-        printLinkedList(head);
+        // head=addAt(head, 2, 47);
+        // printLinkedList(head);
 
-        head=removeAt(head, 2);
-        printLinkedList(head);
+        // head=removeAt(head, 2);
+        // printLinkedList(head);
+
+        // find the middle Node ======================================================== 
+
+        // int size=size(head);
+        // Node mid=getAt(head, (size-1)/2);
+
+        Node mid=getMid(head);
+        System.out.println(mid.data);
+
+        Node kLast=getKthFromEnd(head, 3);
+        System.out.println(kLast.data);
     }
 }
