@@ -174,6 +174,46 @@ public class Implementation {
 
         return slow;
     }
+
+    // data iteratively (O(n^2));
+    public static void reverse(Node head){
+        int len=size(head);
+
+        int i=0;
+        int j=len-1;
+
+        while(i<j){
+            Node nodeAti=getAt(head, i);
+            Node nodeAtj=getAt(head, j);
+
+            int dataAti=nodeAti.data;
+            int dataAtj=nodeAtj.data;
+
+            nodeAtj.data=dataAti;
+            nodeAti.data=dataAtj;
+
+            i++;
+            j--;
+        }
+    }
+
+    // pointer iteratively (O(n))
+
+    public static Node reverseBetter(Node head){
+        Node prev=null;
+        Node curr=head;
+
+        while(curr!=null){
+            Node currKaNext=curr.next;
+
+            curr.next=prev;
+
+            prev=curr;
+            curr=currKaNext;
+        }
+
+        return prev;
+    }
     public static void main(String[] args) {
         // Node head=new Node(5);
 
@@ -233,10 +273,13 @@ public class Implementation {
         // int size=size(head);
         // Node mid=getAt(head, (size-1)/2);
 
-        Node mid=getMid(head);
-        System.out.println(mid.data);
+        // Node mid=getMid(head);
+        // System.out.println(mid.data);
 
-        Node kLast=getKthFromEnd(head, 3);
-        System.out.println(kLast.data);
+        // Node kLast=getKthFromEnd(head, 3);
+        // System.out.println(kLast.data);
+
+        head=reverseBetter(head);
+        printLinkedList(head);
     }
 }
