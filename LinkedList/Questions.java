@@ -178,16 +178,18 @@ public class Questions {
             k=k.next;
             curr_step++;
         }
+
+        if(i!=null){
+            k.next=i;
+        } 
+        if(j!=null){
+            k.next=j;
+        }
         
         return dummy.next;
     }
     
-    if(i!=null){
-        k.next=i;
-    } 
-    if(j!=null){
-        k.next=j;
-    }
+    
     
     public void reorderList(ListNode head) {
         ListNode mid=getMid(head);
@@ -197,7 +199,7 @@ public class Questions {
         
         // combine both parts
     }
-    
+
     public static void main(String[] args) {
         
     }
