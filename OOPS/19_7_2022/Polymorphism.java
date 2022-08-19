@@ -58,5 +58,8 @@ public class Polymorphism {
 
         obj=new Cat();
         obj.walk();
+
+        obj=new Animal();
+        obj.walk();
     }
 }
